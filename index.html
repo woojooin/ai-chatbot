@@ -3,8 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Redirecting...</title>
+    <script>
+      // 변경 시 이 한 줄만 수정
+      const TARGET_URL = "https://45e6bba0974b.ngrok.app";
+
+      // 즉시 리다이렉트
+      window.location.replace(TARGET_URL);
+    </script>
   </head>
   <body>
-    <p>Redirecting to <a href="https://45e6bba0974b.ngrok.app">AI-ChatBot</a></p>
+    <p>Redirecting to <a id="link" href="#">Loading...</a></p>
+    <script>
+      // 링크 표시 업데이트
+      document.getElementById("link").href = TARGET_URL;
+      document.getElementById("link").textContent = TARGET_URL;
+    </script>
   </body>
 </html>
